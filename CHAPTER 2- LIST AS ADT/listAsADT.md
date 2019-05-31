@@ -1,33 +1,3 @@
-<!----- Conversion time: 0.849 seconds.
-
-
-Using this Markdown file:
-
-1. Cut and paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β17
-* Thu May 30 2019 19:40:56 GMT-0700 (PDT)
-* Source doc: https://docs.google.com/open?id=1reHidIfCw38NhI6yefFDcx9eSNZmzNhqBDyLXJwqwbY
-* This is a partial selection. Check to make sure intra-doc links work.
-
-WARNING:
-Inline drawings not supported: look for ">>>>>  gd2md-html alert:  inline drawings..." in output.
-
------>
-
-
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 1; ALERTS: 1.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
 
 
 # CHAPTER 2: LIST AS AN ABSTRACT DATA TYPE
