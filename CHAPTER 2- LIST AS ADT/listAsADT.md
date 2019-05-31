@@ -31,7 +31,7 @@ _The memory for the previous array is made free. Since the operation to copy con
 
 
 
-![drawing](//PresentationResources/listADT.png)
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/arrayDEMO.PNG)
 
 Every element in an array is uniquely identified by the index. 
 
