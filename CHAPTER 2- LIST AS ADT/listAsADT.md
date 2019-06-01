@@ -134,5 +134,86 @@ int main(){
 ```
 
 
+## Limitations of Array:
 
-<!-- Docs to Markdown version 1.0β17 -->
+Let us assume a fixed section of computer memory. 
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+
+Suppose each segment in the memory is of 1 byte. 
+
+Now,
+
+If a programmer types **int x;** in the program, the equivalent memory (4 Bytes) is allocated in the memory. Similar Happens with the array.
+
+When an array is declared
+
+**int arr[5];**
+
+This means that 5 integer type elements are to be stored in the array. So, the space that would be required in memory would be 5 * 4 = 20 Bytes. Now, when it comes to memory allocation, **arrays require contiguous memory. **This requires that 20 bytes of memory (20 segments) should be continuously free in memory area else the array can’t be allocated memory.
+
+This is one of the biggest limitations of the array.
+
+**CONTIGUOUS MEMORY ALLOCATION AND ARRAY:**
+
+The answer to why array requires contiguous memory is, array uses a base addressing for indexing the elements. Since the base address is increment sequentially to retrieve subsequent elements, the addresses in memory need to be contiguous too.
+
+**NOTE:**
+
+**_Dynamic Array Memory Allocation:_**
+
+_As it was mentioned earlier that dynamic array is capable to adjust its size, but the memory management somehow does not support the extension of array size if there is no contiguous memory available. To solve this a new array with the double size is created wherever the contiguous memory is found. If not found, the dynamic array can’t be created. _ 
+
+
+## INTRODUCTION TO LINKED LIST
+
+Starting off from the problem of memory management in case of arrays, it can be a solution that memory is sought for one individual element of the list, rather than the list (array) as a whole. 
+
+In the linked list, the request to memory is made of one element at a time.
+
+Again, if the previous example is considered. When 4 elements of integer types are to be stored, then instead of asking memory for the entire collection to be stored at one place, memory can be asked for separate units of data each linked to each other via some means. This means the need for contiguous memory has been overcome. 
+
+  
+
+ 
+
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+
+Suppose there are two elements to be stored {4,5}. For each element, a new request for memory allocation is taken and memory is allocated for each element ( Not the entire list as a whole). It is also not required that the elements 4 and 5 be stored contiguously in the memory area. 
+
+But somehow these two elements need to be linked to each other so that the list can be accessed continuously. For this purpose, pointers are used.
+
+Technically, each entry in a linked list is called a node. A node is much more than the raw data to be inserted. A node contains the data and the link to traverse to the previous and next node.
+
+So the node can be represented using the structure as:
+
+
+```
+struct node {
+int data;
+node* next;
+}
+```
+
+
+
+
+<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+
+In the above-mentioned code example, the second component of the structure is marked as **node*** which marks that the second field of the node will only store an address. 
+
+In the linked list, the first node is also called the** head** node. The address field of the last node of the linked list points to null, which marks the end of the list. 
+
+ The only information we need to have is the address of the head node. Once we have the address of the head node, we can traverse the entire list. Although it is advantageous in terms of memory, the drawback of using linked list is that no element of the list is directly accessible which means for accessing the 4th element, one would need to first access 1st, 2nd,and 3rd elements compulsorily. 
+
+The time taken to access elements has O(n) complexity. (because each element has to be traversed and in the worst case the element to be searched will be the last element of this list.
+
