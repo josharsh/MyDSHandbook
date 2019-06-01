@@ -160,9 +160,7 @@ The answer to why array requires contiguous memory is, array uses a base address
 
 **NOTE:**
 
-**_Dynamic Array Memory Allocation:_**
-
-_As it was mentioned earlier that dynamic array is capable to adjust its size, but the memory management somehow does not support the extension of array size if there is no contiguous memory available. To solve this a new array with the double size is created wherever the contiguous memory is found. If not found, the dynamic array can’t be created. _ 
+**_Dynamic Array Memory Allocation:_**_As it was mentioned earlier that dynamic array is capable to adjust its size, but the memory management somehow does not support the extension of array size if there is no contiguous memory available. To solve this a new array with the double size is created wherever the contiguous memory is found. If not found, the dynamic array can’t be created. _ 
 
 
 ## INTRODUCTION TO LINKED LIST
