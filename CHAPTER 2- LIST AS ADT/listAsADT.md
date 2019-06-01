@@ -138,10 +138,7 @@ int main(){
 
 Let us assume a fixed section of computer memory. 
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/memory1.PNG)
 
 Suppose each segment in the memory is of 1 byte. 
 
@@ -179,11 +176,7 @@ Again, if the previous example is considered. When 4 elements of integer types a
   
 
  
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/memory2.PNG)
 
 Suppose there are two elements to be stored {4,5}. For each element, a new request for memory allocation is taken and memory is allocated for each element ( Not the entire list as a whole). It is also not required that the elements 4 and 5 be stored contiguously in the memory area. 
 
@@ -202,12 +195,7 @@ node* next;
 ```
 
 
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/memory3.PNG)
 
 In the above-mentioned code example, the second component of the structure is marked as **node*** which marks that the second field of the node will only store an address. 
 
