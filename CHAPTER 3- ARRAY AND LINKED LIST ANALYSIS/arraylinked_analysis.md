@@ -36,3 +36,27 @@ Here’s an example:
 ![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/arrayvsLinked.PNG)
 
 But this case would differ and the linked list would be useful is the data part is very large and the pointer is small.
+## Cost Of Insertion:
+
+
+
+1. At the Beginning
+
+    **ARRAY**: O(n)
+
+
+    **LINKED LIST**: O(1)
+
+2. At the end: 
+
+	**Array:** O(1) if array is not full and O(n) if array is full
+
+	**Linked List: **O(n)
+
+
+
+3. At ith Position:
+
+	**Array:** O(n)
+
+	**Linked List: **O(n)
