@@ -29,13 +29,10 @@ NOTE: Memory usage differs from memory management. When it comes to usage, a lin
 Here’s an example:
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/arrayvsLinked.PNG)
 
 But this case would differ and the linked list would be useful is the data part is very large and the pointer is small.
+<<<<<<< HEAD
 ## Cost Of Insertion:
 
 
@@ -60,3 +57,5 @@ But this case would differ and the linked list would be useful is the data part 
 	**Array:** O(n)
 
 	**Linked List: **O(n)
+=======
+>>>>>>> b1c8b064875bf8f67b3339dbc96844ea88d55c88
