@@ -41,7 +41,7 @@ It might strike that why do pointers have to be strongly typed when they only ne
 
 
 
-![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/pointer.PNG)
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/pointers.PNG)
 
 
 This is the binary representation of 1010 
