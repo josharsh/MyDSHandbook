@@ -22,10 +22,8 @@ cout << *p << endl;
 
 Let us assume a fixed section of computer memory. 
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/memory1.PNG)
 
-
-![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
 
 Suppose each segment in the memory is of 1 byte. 
 
@@ -43,10 +41,8 @@ It might strike that why do pointers have to be strongly typed when they only ne
 
 
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/arrayvsLinked.PNG)
 
-
-![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
 
 This is the binary representation of 1010 
 
