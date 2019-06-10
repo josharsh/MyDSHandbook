@@ -144,7 +144,11 @@ q=&p;
 Memory is reserved for a program in execution and it is split as:
 
 
-![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/heapstack.PNG)
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
 
 These portions in memory describe the type of data they hold during the execution of the program. Out of these Stack,Static/Global and Code(Text) are fixed whereas Heap is resizable during the execution of the program. 
 
@@ -177,9 +181,10 @@ When the program is in execution, at first main method is triggered so all the i
 
 When the main function calls increment function, the execution of main function is stopped for some time and the control is passed to the called function. Now, another stack frame is created for increment function. In this stack frame, local variables related to increment function are created. 
 
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/stackmemory.PNG)
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
 
 The real problem was, when the** a=a+1** statement is called, the local variable pertaining to stack frame of function increment gets incremented which only got the value of **a** from the main function as the argument. The value of** a** was copied to local variable of increment function and the same got incremented and thus did not result in incrementing the local variable of main function because the local variables are not accessible outside the **stack frame**. 
 
@@ -214,8 +219,10 @@ When talking about an array, the concept of pointers is very crucial.
 
 
 
+<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/arraypointer.PNG)
+
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
 
 Suppose the array named A is allocated memory as shown above. Since one integer takes 4 bytes the address of next integer will be 4 bytes more than the previous address.
 
