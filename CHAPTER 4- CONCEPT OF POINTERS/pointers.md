@@ -136,3 +136,164 @@ p=&a;
 int **q;
 q=&p;
 
+# USE CASES:
+
+
+## As Function Arguments (Call By Reference):
+
+Memory is reserved for a program in execution and it is split as:
+
+
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/heapstack.PNG)
+
+These portions in memory describe the type of data they hold during the execution of the program. Out of these Stack,Static/Global and Code(Text) are fixed whereas Heap is resizable during the execution of the program. 
+
+Codes stores all the instructions. This includes declarations and statements. The static and global variables are deal with a specific memory assigned. The local variables and methods are stores in the Stack. 	
+
+Suppose there’s a program,
+
+
+```
+#include <stdio.h>
+void increment(int a)
+{
+a=a+1;
+}
+int main()
+{
+int a;
+a=10;
+increment(a);
+printf("%d",a);
+}
+```
+
+
+The program intends to increase value of a variable named a but it outputs 10 and does not show the incremented value.  
+
+This is because:
+
+When the program is in execution, at first main method is triggered so all the information associated with main function is stored in the **stack**. This information typically includes local variable, returning to which function, etc. So, some part of stack memory is occupied with information about the main function, which is called a **stack frame**. Each function has a stack frame in stack. 
+
+When the main function calls increment function, the execution of main function is stopped for some time and the control is passed to the called function. Now, another stack frame is created for increment function. In this stack frame, local variables related to increment function are created. 
+
+
+
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/stackmemory.PNG)
+
+The real problem was, when the** a=a+1** statement is called, the local variable pertaining to stack frame of function increment gets incremented which only got the value of **a** from the main function as the argument. The value of** a** was copied to local variable of increment function and the same got incremented and thus did not result in incrementing the local variable of main function because the local variables are not accessible outside the **stack frame**. 
+
+Once the control is passed back to main function, the stack frame created for increment function is cleared. This implies that **the lifetime of a local variable is till the time the function is executing**.
+
+The above described scenario is called Call By Value.
+
+If we look from a different perspective called Call By Reference, The code would look like,
+
+
+```
+#include <stdio.h>
+int increment( int *p)
+{ *p= (*p)+1;
+}
+int main()
+{
+int a;
+a=10;
+increment(&a);
+printf("%d", a); //Prints 11
+}
+```
+
+
+While executing the value which is stored in the local variable p ( for function increment) is the address of memory location where a ( of function main) is stored, Hence the value of a is incremented using call By reference. 
+
+
+# Concept of Array and Pointers:
+
+When talking about an array, the concept of pointers is very crucial. 
+
+
+
+
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/arraypointer.PNG)
+
+Suppose the array named A is allocated memory as shown above. Since one integer takes 4 bytes the address of next integer will be 4 bytes more than the previous address.
+
+int a= { 2 , 4 , 6 , 8 , 10 }
+
+To print the address of initial element we can print &a[0] or we can also print the name of the array.  To print the initial value** *a** can be used and for every subsequent value ***(a + 1) **
+
+
+```
+#include <stdio.h>
+int main()
+{
+    int a[]= {2,4,6,8,10};
+    printf("Array is: { 2 , 4 , 6 , 8 , 10 } \n"); 
+    printf("First Address Using printing &a[0]: %d \n",&a[0]);
+    printf("First Address Using printing a :%d \n",a);
+    printf("Value at First Address Using *&a[0] is : %d \n",*&a[0]);
+    printf("Value at First Address Using *a is : %d \n",*a);
+    printf("Value at First Address Using *(a+1) is : %d \n",*(a+1));
+}
+```
+
+
+
+## Array as Function Arguments
+
+Pointer have a role to play when array is passed as function argument.
+
+e.g. To print the sum of an array, the code can be like
+
+
+```
+#include <stdio.h>
+int calculateSum(int a[], int n){
+    int i,sum;
+    for(i=0;i<n;++i){
+        sum+=a[i];
+    }
+    return sum;
+}
+int main()
+{
+    int a[]= {2,4,6,8,10};
+    int n=sizeof(a)/sizeof(a[0]);
+    int sum=calculateSum(a,n);
+    printf("%d",sum);
+}
+
+```
+
+
+This code calls calculateSum function from main and passes the array and size of array to it. It calculates the sum and outputs 30.
+
+But if we wanted to calculate the size of array in the function calculateSum(), the code would look like,
+
+
+```
+#include <stdio.h>
+int calculateSum(int a[]){
+    int i,sum;
+    int n=sizeof(a)/sizeof(a[0]);
+    printf("%d \n",n);
+    for(i=0;i<n;++i){
+        sum+=a[i];
+    }
+    return sum;
+}
+int main()
+{
+    int a[]= {2,4,6,8,10};
+    int sum=calculateSum(a);
+    printf("%d",sum);
+}
+```
+
+
+But this outputs the incorrect sum
+
+This is because whenever the array is passed as function argument, the compiler understands it as a pointer to the first element of the array. This is done to save memory because arrays can be really large and to create a local array and copy content would require large amount of memory in many cases. So the local memory created for the function calculateSum points to the array in main function using pointer.
+
+
