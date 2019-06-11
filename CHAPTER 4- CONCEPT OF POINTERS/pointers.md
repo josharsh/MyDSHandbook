@@ -359,13 +359,13 @@ Most Recently Called Function Sits on Top of the stack and is also the one to be
 
 **PHASE 2:** main() calls SumOfSquares()
 
-**PHASE 3: **SumOfSquares() calls Square()
+**PHASE 3:** SumOfSquares() calls Square()
 
 **PHASE 4:** Square returns value and memory for Square() is deallocated 
 
-**PHASE 5: **Control is passed back to main
+**PHASE 5:** Control is passed back to main
 
-**PHASE 6: **Program finishes, main() is popped of stack and stack memory is empty
+**PHASE 6:** Program finishes, main() is popped of stack and stack memory is empty
 
 
 ## Heap:
