@@ -308,11 +308,7 @@ This is because whenever the array is passed as function argument, the compiler 
 Memory assigned to a program is divided in 4 segments as mentioned earlier.
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/newheapstack.PNG)
 
 There 4 segments of memory are used to store various components of a program. The memory assigned for stack,static/global and code segments can’t be changed during run time.When we talk about stack, it is used for the local storage while the program is running. 
 
@@ -352,17 +348,10 @@ printf("Output = %d" , total);
 
 
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/stackinphases1.PNG)
 
 
-![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
-
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/stackinphases2.PNG)
 
 Most Recently Called Function Sits on Top of the stack and is also the one to be popped first.
 
@@ -438,17 +427,11 @@ p=(int*) malloc (20*sizeof(int));
 
 
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/heapdemo1.PNG)
+
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/heapdemo2.PNG)
 
 
-![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
-
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
 
 **IMPORTANT POINTS:**
 
