@@ -302,3 +302,259 @@ But this outputs the incorrect sum
 This is because whenever the array is passed as function argument, the compiler understands it as a pointer to the first element of the array. This is done to save memory because arrays can be really large and to create a local array and copy content would require large amount of memory in many cases. So the local memory created for the function calculateSum points to the array in main function using pointer.
 
 
+
+# Pointers and Dynamic Memory
+
+Memory assigned to a program is divided in 4 segments as mentioned earlier.
+
+
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+
+There 4 segments of memory are used to store various components of a program. The memory assigned for stack,static/global and code segments can’t be changed during run time.When we talk about stack, it is used for the local storage while the program is running. 
+
+When a function is called, a stack frame is allocated for the function and the required memory is assigned. The most recent called function sits on top of the stack and after the function is done processing, the stack frame is cleared. 
+
+_The memory for the stack is assigned by the operating system but the actual allocation of memory for each function (the local variables etc. for the function) happens during the runtime._ 
+
+If the number of functions are too many or by any other reason the memory assigned to the stack if totally utilized, it is called **Stack Overflow.**
+
+One of the common example of stack overflow is when the recursion goes infinitely. 
+
+The allocation and deallocation of memory in the stack happens by a set rule, When a function is called it is pushed on the top of the stack and when it finishes execution it is popped out from the stack. The scope of variable does not change when the function is in stack.
+
+**Example for Demonstration:**
+
+
+```
+#include <stdio.h>
+int total;
+int Square(int x)
+{
+return x*x;
+}
+int SquareOfSum(int x , int y)
+{
+int z = Square(x+y);
+return z;
+}
+int main()
+{
+int a= 4, b= 8;
+total=SquareOfSum(a,b);
+printf("Output = %d" , total);
+}
+```
+
+
+
+
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+
+
+
+<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+
+Most Recently Called Function Sits on Top of the stack and is also the one to be popped first.
+
+**PHASE 1:** main() is called and the program begins.
+
+**PHASE 2:** main() calls SumOfSquares()
+
+**PHASE 3: **SumOfSquares() calls Square()
+
+**PHASE 4:** Square returns value and memory for Square() is deallocated 
+
+**PHASE 5: **Control is passed back to main
+
+**PHASE 6: **Program finishes, main() is popped of stack and stack memory is empty
+
+
+## Heap:
+
+Unlike the stack and other segments, the memory for heap is not fixed. It’s size can change during the run time. Also, there is no set rule for memory allocation and deallocation ( like push and pop in stack).
+
+ A programmer can decide the amount of memory to be used and the duration for which the memory has to be used. A heap can grow as long as the system does not run out of memory. 
+
+**_Note: When talking about memory associated with heap or stack, it is always referred to the Random Access Memory._**
+
+Heap is also called a free pool of memory. The actual implementation of heap is complex and varies from system to system, but the abstract view of heap can be seen as a free pool of memory.
+
+Heap is also called dynamic memory. Using heap is also called dynamic memory allocation. 
+
+**_NOTE: The term “Heap” is also used to denote a data structure but when talking about memory, it does not refer to the “Heap” as used in data structures. Although the data structure “Stack” is the same in memory as in data structures. The implementation of stack, the data structure is used in memory but in terms of heap in memory, it only refers to a free pool of memory._**
+
+
+## Dynamic Memory Allocation In C:
+
+Dynamic Memory allocation in C is carried out using 4 functions
+
+
+
+1. malloc
+2. calloc
+3. realloc
+4. free
+
+Dynamic Memory Allocation in C++ is carried out using 2 operators
+
+
+
+1. new
+2. delete 
+
+**_Note: Since C++ has backward compatibility, the functions of C can also be used in C++._**
+
+**C Program for Dynamic Memory Allocation:**
+
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+int a; //Since it is a local variable, it goes to stack
+int *p;
+p = (int*) malloc (sizeof(int));
+/* Malloc returns a void pointer to the starting address of the memory block assigned. We have to typecast because it returns void pointer */ 
+*p=10;
+// free(p);
+p= (int*) malloc(sizeof(int));
+*p=20;
+/* a new memory block to store 20 is assigned at some other address in heap and the previous is not cleared */
+free(p);
+p=(int*) malloc (20*sizeof(int));
+```
+
+
+
+
+<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+
+
+
+<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline drawings not supported directly from Docs. You may want to copy the inline drawing to a standalone drawing and export by reference. See <a href="https://github.com/evbacher/gd2md-html/wiki/Google-Drawings-by-reference">Google Drawings by reference</a> for details. The img URL below is a placeholder. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![drawing](https://docs.google.com/a/google.com/drawings/d/12345/export/png)
+
+**IMPORTANT POINTS:**
+
+
+
+*   Memory in heap is not cleared when the pointer is changed, it needs to be cleared every time when the the value/variable stored is not required
+*   The malloc(size) function returns a void pointer to the address of memory in heap so the void pointer has to be converted to integer pointer for storing integer values.
+*   To allocate memory for array in heap, the malloc function needs to be given the size of array:
+    *   For integer: 4 * Number of Elements
+    *   For Character Array: 1 * Number of Elements
+*   Assigning/Changing values in heap is only done using referencing i.e. obtaining a pointer to the address of heap and then assigning the value using aistrick. ( *p =10 )
+
+
+## Dynamic Memory Allocation in C++
+
+In C++ the two operators used are New and Delete. They are used similar to malloc and free functions in C. The difference is they are typesafe which means that the typecasting in not required. 
+
+**Syntax:**
+
+
+```
+int *p;
+p = new int;
+*p = 10;
+p= new int[20];
+delete[] p;
+```
+
+
+
+## Malloc,Calloc, Realloc and Free in C
+
+
+### Malloc:
+
+**	**Malloc is most frequently used function for dynamic memory allocation. 
+
+**Definition: `void* malloc( size_t size)`**
+
+
+
+*   It returns a void pointer which has to be typecasted
+*   size_t means only positive number can be entered (unsigned)
+*   Assignment can only be done using dereferencing (Using pointers)
+
+**Syntax:  `int *p=(int*) malloc(sizeof(int));`**
+
+
+### Calloc:
+
+Calloc is similar to malloc but takes in two parameters. The first argument is the number of elements of particular data type and second argument is the size of the data type.
+
+**Syntax:**
+
+
+```
+int *p = (int*) calloc(1,sizeof(int));
+```
+
+
+Another difference between malloc and calloc is that, **malloc** initializes the assigned memory location with some garbage values while **calloc** does not initialize the values. 
+
+
+### Calloc:
+
+If we already have a dynamic block of memory and we need to change the size of the memory, then realloc is used.
+
+**Syntax:**
+
+
+```
+int *p = (int*) realloc(void *ptr, size_t size);
+```
+
+
+*ptr= Address of initial block. 
+
+
+## EXAMPLES:
+
+
+```
+#include <stdio.h>
+
+int main()
+{
+  int n;
+  scanf("%d",&n);
+  int *arr=(int*) malloc(n*sizeof(int));
+  arr[0]=1;
+  printf("%d",arr[0]);
+}
+```
+
+
+
+```
+#include <stdio.h>
+
+int main()
+{
+  int *p;
+  p=(int*)malloc(sizeof(int));
+  *p=10;
+  printf("%d",*p);
+}
+```
+
+
