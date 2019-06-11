@@ -351,7 +351,7 @@ printf("Output = %d" , total);
 ![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/stackinphases1.PNG)
 
 
-![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/stackinphases2.PNG)
+![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/stackinphases2.png)
 
 Most Recently Called Function Sits on Top of the stack and is also the one to be popped first.
 
@@ -443,6 +443,7 @@ p=(int*) malloc (20*sizeof(int));
     *   For integer: 4 * Number of Elements
     *   For Character Array: 1 * Number of Elements
 *   Assigning/Changing values in heap is only done using referencing i.e. obtaining a pointer to the address of heap and then assigning the value using aistrick. ( *p =10 )
+
 
 
 ## Dynamic Memory Allocation in C++
