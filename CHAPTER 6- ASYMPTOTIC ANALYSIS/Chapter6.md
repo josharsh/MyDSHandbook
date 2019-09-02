@@ -1,13 +1,16 @@
+
+
+
 # Chapter 6:  Asymptotic Analysis
 
 
 ## Time Complexity of a Program:
 
-A program to find the total number of prime numbers between a given range can be solved by two approaches. One is to iterate from **1 to** to** n-1** and check the satisfying numbers to be prime while the other is to iterate till **square root of n**, onto the same conditions. 
+A program to find the total number of prime numbers between a given range can be solved by two approaches. One is to iterate from **1 to** to **n-1** and check the satisfying numbers to be prime while the other is to iterate till **square root of n**, onto the same conditions. 
 
 When we talk about time complexity of a program, we generally deal with large input sizes, because the factor of time does not simply imply to smaller input values. In the above given condition to find number of prime numbers till a number n.
 
- \
+ 
 Let n= 10000;
 
 Suppose each iteration takes 1 ms to complete. 
@@ -56,3 +59,4 @@ This can also be written as** f(n*)<= C.g(n)** where C is a constant.
 
 
 ### **Now, we can say that f(n) is contained in O(g(n)). **
+
