@@ -1,5 +1,4 @@
-# 
-    Chapter 6:  Asymptotic Analysis
+# Chapter 6:  Asymptotic Analysis
 
 
 ## Time Complexity of a Program:
