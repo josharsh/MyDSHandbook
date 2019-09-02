@@ -50,9 +50,9 @@ Suppose to solve a problem, two algorithms have been devised. Let the running ti
 Now, if g(n) grows faster than f(n) simply means that there must be one independent value of n, let’s say **n*** for which and for values larger than **n*** the value returned by **g(n)** will always be greater than **f(n).** 
 
 
-### **i.e g(n*)>=f(n*)**
+### i.e g(n*)>=f(n*)
 
-This can also be written as **f(n*)<= C.g(n)** where C is a constant. 
+This can also be written as **f(n)<= C.g(n)** where C is a constant. 
 
 
 ### Now, we can say that f(n) is contained in O(g(n)).
