@@ -20,7 +20,7 @@ Suppose each iteration takes 1 ms to complete.
 
 **Case2:** Iterating till **sqrt(n):**
 
-**	**Total number of iterations: 315 (approx)
+	Total number of iterations: 315 (approx)
 
 	Total Time Taken= 315 ms = 0.315 seconds
 
@@ -39,7 +39,7 @@ There are different types of asymptotic notations widely used to mathematically 
 
 *   Constants are ignored i.e. O(5n) is same is O(n)
 *   Order of complexity is:
-    *   **O(1) < O(log n) < O(n) < O (nlogn) < O(n^2) < O(2^n) < O(n!) **
+    *   **O(1) < O(log n) < O(n) < O (nlogn) < O(n^2) < O(2^n) < O(n!)** 
 
 **Side Note: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)** is a great tool to learn more about big-O 
 
@@ -55,4 +55,4 @@ Now, if g(n) grows faster than f(n) simply means that there must be one independ
 This can also be written as **f(n*)<= C.g(n)** where C is a constant. 
 
 
-### **Now, we can say that f(n) is contained in O(g(n)). **
+### Now, we can say that f(n) is contained in O(g(n)).
