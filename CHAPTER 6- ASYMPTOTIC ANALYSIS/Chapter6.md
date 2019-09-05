@@ -56,3 +56,14 @@ This can also be written as **f(n)<= C.g(n)** where C is a constant.
 
 
 ### Now, we can say that f(n) is contained in O(g(n)).
+
+
+# Introduction To Asymptotic Analysis: 
+
+Each algorithm is compared on this basis of time taken to execute and memory required. 
+
+**Big-O: **Describes the worst-case running time of an algorithm
+
+**Big Omega (Ω):** Describes the best-case running time of an algorithm
+
+**Big-Theta (θ): **Describes the average running case of an algorithm
