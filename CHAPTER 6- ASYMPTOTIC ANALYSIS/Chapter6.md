@@ -67,3 +67,8 @@ Each algorithm is compared on this basis of time taken to execute and memory req
 **Big Omega (Ω):** Describes the best-case running time of an algorithm
 
 **Big-Theta (θ):** Describes the average running case of an algorithm
+
+# Analysis of Algorithms:
+
+When we talk about design and analysis of an algorithm, the analysis of an algorithm deals with the efficiency of an algorithm. Efficiency is generally measured in terms of time and space complexity. Generally, more than space, time complexity is considered a driving factor for measuring the efficiency of an algorithm. This is because time is a limiting parameter. 
+
