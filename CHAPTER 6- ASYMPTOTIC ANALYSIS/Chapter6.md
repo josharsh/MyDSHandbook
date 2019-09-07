@@ -74,3 +74,6 @@ When we talk about design and analysis of an algorithm, the analysis of an algor
 Instead of measuring the time complexity in terms of concrete time because in different systems the running time of an algorithm can vary as per the variable specs of the machine it is being executed upon. This is why the abstract units of measurements are utilized to measure the time complexity of the algorithm. This ensures that the time complexity of an algorithm is uniform across systems and machines.  
 
 The abstract units of measurements is based on the steps taken to successfully execute an algorithm. The step is a kind of basic operation. However, the notion of a step varies as per the programming language used. For examples the steps used in assembly language might include to fetch the data from registers to the main memory but when devising algorithms to problems, we use a higher level approach and a programming language like c,c++ or java. 
+Basically we measure time complexity in terms of input size.So, if the input is of size n, then the time taken will be a function of n. 
+
+Example: We have an array of n elements, and we want to sort the array in ascending order. Now any naive algorithm will compare each pair of elements of the array and take time proportional  to O(n2) time. [The sequential speed of CPU is about 108 operations per second]
