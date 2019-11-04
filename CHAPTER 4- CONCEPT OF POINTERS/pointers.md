@@ -29,7 +29,7 @@ Suppose each segment in the memory is of 1 byte.
 
 Now,
 
-If a programmer types **int x;** in the program, the equivalent memory (4 Bytes) is allocated in the memory. When a **pointer *p** for x is created, the pointer points to **integer x** and** *p** stores the value of **a** whereas** p** stores the address of **a**.
+If a programmer types **int x;** in the program, the equivalent memory (4 Bytes) is allocated in the memory. When a **pointer *p** for x is created, the pointer points to **integer x** and  *p stores the value of **a** whereas **p** stores the address of **a**.
 
 
 ## WHY DIFFERENT DATA TYPES FOR DIFFERENT POINTERS?
@@ -186,7 +186,7 @@ When the main function calls increment function, the execution of main function 
 
 ![drawing](https://github.com/josharsh/MyDSHandbook/blob/master/PresentationResources/stackmemory.PNG)
 
-The real problem was, when the** a=a+1** statement is called, the local variable pertaining to stack frame of function increment gets incremented which only got the value of **a** from the main function as the argument. The value of** a** was copied to local variable of increment function and the same got incremented and thus did not result in incrementing the local variable of main function because the local variables are not accessible outside the **stack frame**. 
+The real problem was, when the **a=a+1** statement is called, the local variable pertaining to stack frame of function increment gets incremented which only got the value of **a** from the main function as the argument. The value of **a** was copied to local variable of increment function and the same got incremented and thus did not result in incrementing the local variable of main function because the local variables are not accessible outside the **stack frame**. 
 
 Once the control is passed back to main function, the stack frame created for increment function is cleared. This implies that **the lifetime of a local variable is till the time the function is executing**.
 
@@ -226,7 +226,7 @@ Suppose the array named A is allocated memory as shown above. Since one integer 
 
 int a= { 2 , 4 , 6 , 8 , 10 }
 
-To print the address of initial element we can print &a[0] or we can also print the name of the array.  To print the initial value** *a** can be used and for every subsequent value ***(a + 1) **
+To print the address of initial element we can print &a[0] or we can also print the name of the array.  To print the initial value *a can be used and for every subsequent value  *(a + 1)
 
 
 ```
