@@ -1,6 +1,6 @@
 # Concept Of Pointers in C/C++
 
-Pointers are the variable which hold the address of other variables. Pointers are used to carry references to other variables. Pointer Variables are strongly typed. A pointer variable of a particular data type is need to store the address of corresponding variable. For an integer type variable the pointer has to be integer, this extends to the fact that a char value can only be pointed by a character pointer and also goes similar for other data types. 
+Pointers are the variable which hold the address of other variables. Pointers are used to carry references to other variables. Pointer Variables are strongly typed. A pointer variable of a particular data type is needed to store the address of corresponding variable. For an integer type variable the pointer has to be integer, this extends to the fact that a char value can only be pointed by a character pointer and also goes similar for other data types. 
 
 When we talk  about memory management in programming, we generally deal with the Random Access Memory. Whenever a variable is declared, certain amount of memory in the RAM is allocated which is based on the datatype of the variable being used in the program. This allocation in memory in allocated while the program is in running and the addresses allocated to the variables might be different every time a program runs. A pointer variable is represented using an Asterisk.
 
