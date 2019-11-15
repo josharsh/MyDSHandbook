@@ -12,6 +12,6 @@ Because computer is a electronic machine which can only function using two state
 
 ## A Decimal Number:
 For example, the number 123 can be written as: 
-**1*100+ 2*10+3*1**
+**1* 100+ 2* 10+3*1**
 
 
